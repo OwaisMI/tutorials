@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><style>
+*{
+  margin:0px;
+  font-size: 20px;
+}
+.dropdown a{
+  list-style: none;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+}
+.dropdown-content a{
+
+  width: 150px;
+  height:50px;
+  text-align: center;
+  float: left;
+  border: 1px solid white;
+  background-color: blue;
+  color: aliceblue;
+  display: block;
+  text-decoration: none;
+}
+.dropdown .dropbtn{
+  color: aliceblue;
+  background-color: green;
+  width: 150px;
+  float: left;
+  height: 50px;
+}
+.dropdown:hover .dropdown-content{
+  display: block;
+  background-color: blue;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+</style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <div class="dropdown">
+        <button class="dropbtn">Drop</button>
+        <div class="dropdown-content">
+          <a href="#">Drop1</a>
+          <a href="#">Drop2</a>
+          <a href="#">Drop3</a>
+      </div>
+
+    </div>
+  </body>
+</html>
