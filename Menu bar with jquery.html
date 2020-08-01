@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <style media="screen">
+
+    body {
+      font-family: 'Lato', sans-serif;
+      margin:0px;
+      padding: 0px;
+    }
+.Main_class{
+  margin: 100px 50px;
+}
+/* To make the drop down menu in line with the main menu */
+.Main_class ul{
+  margin 0;
+  padding:0;
+  list-style:none;
+}
+/* To edit the list, you have to use the main class name and then li */
+.Main_class li{
+  float: left;
+  display: block;
+  border: 1px solid black;
+  width: 100px;
+  height: 50px;
+  background-color: midnightblue;
+  color:white;
+  text-align:center;
+  line-height: 50px;
+  cursor:pointer;
+  position:relative;
+}
+.Main_class li:hover{
+  background-color:lightgreen;
+}
+/* below if you want to call a class from sub ul thats how u write it */
+.Main_class ul.sub{
+  position:absolute;
+  display:none;
+
+}
+
+   </style>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <ul class="Main_class">
+      <li>
+        A
+        <ul class="sub">
+          <li>A1</li>
+          <li>A2</li>
+          <li>A3</li>
+        </ul>
+      </li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+
+      </ul>
+
+    </ul>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+      $(function(){
+        $('.Main_class li').hover(
+        function(){
+          $('ul.sub',this).slideDown(500); },
+          function(){
+            $('ul.sub',this).slideUp(300);
+          }
+        );
+      });
+
+
+    </script>
+  </body>
+</html>
